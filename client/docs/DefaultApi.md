@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.DefaultApi
+# API.Backend.Api.DefaultApi
 
 All URIs are relative to *http://localhost*
 
@@ -16,9 +16,9 @@ Get Root
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using API.Backend.Api;
+using API.Backend.Client;
+using API.Backend.Model;
 
 namespace Example
 {

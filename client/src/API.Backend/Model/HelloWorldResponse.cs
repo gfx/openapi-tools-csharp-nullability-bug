@@ -20,16 +20,15 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
-using System.ComponentModel.DataAnnotations;
-using OpenAPIDateConverter = Org.OpenAPITools.Client.OpenAPIDateConverter;
+using OpenAPIDateConverter = API.Backend.Client.OpenAPIDateConverter;
 
-namespace Org.OpenAPITools.Model
+namespace API.Backend.Model
 {
     /// <summary>
     /// HelloWorldResponse
     /// </summary>
     [DataContract(Name = "HelloWorldResponse")]
-    public partial class HelloWorldResponse : IValidatableObject
+    public partial class HelloWorldResponse
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="HelloWorldResponse" /> class.
@@ -110,15 +109,6 @@ namespace Org.OpenAPITools.Model
             return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
 
-        /// <summary>
-        /// To validate all properties of the instance
-        /// </summary>
-        /// <param name="validationContext">Validation context</param>
-        /// <returns>Validation Result</returns>
-        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            yield break;
-        }
     }
 
 }

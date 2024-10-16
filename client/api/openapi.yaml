@@ -20,21 +20,25 @@ components:
   schemas:
     HelloWorldResponse:
       example:
-        message4: message4
-        message3: message3
-        message2: message2
-        message1: message1
+        message4: 2000-01-23T04:56:07.000+00:00
+        message3: 2000-01-23T04:56:07.000+00:00
+        message2: 2000-01-23T04:56:07.000+00:00
+        message1: 2000-01-23T04:56:07.000+00:00
       properties:
         message1:
+          format: date-time
           nullable: true
           type: string
         message2:
+          format: date-time
           nullable: true
           type: string
         message3:
+          format: date-time
           nullable: true
           type: string
         message4:
+          format: date-time
           nullable: true
           type: string
       required:
