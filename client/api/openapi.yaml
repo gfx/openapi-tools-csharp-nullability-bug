@@ -1,0 +1,31 @@
+openapi: 3.1.0
+info:
+  title: FastAPI
+  version: 0.1.0
+servers:
+- url: /
+paths:
+  /:
+    get:
+      operationId: get_root__get
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HelloWorldResponse'
+          description: Successful Response
+      summary: Get Root
+components:
+  schemas:
+    HelloWorldResponse:
+      example:
+        message: message
+      properties:
+        message:
+          nullable: true
+          type: string
+      required:
+      - message
+      title: HelloWorldResponse
+
