@@ -20,12 +20,25 @@ components:
   schemas:
     HelloWorldResponse:
       example:
-        message: message
+        message4: message4
+        message3: message3
+        message2: message2
+        message1: message1
       properties:
-        message:
+        message1:
+          nullable: true
+          type: string
+        message2:
+          nullable: true
+          type: string
+        message3:
+          nullable: true
+          type: string
+        message4:
           nullable: true
           type: string
       required:
-      - message
+      - message1
+      - message3
       title: HelloWorldResponse
 

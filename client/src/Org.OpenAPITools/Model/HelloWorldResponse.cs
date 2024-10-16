@@ -39,22 +39,51 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="HelloWorldResponse" /> class.
         /// </summary>
-        /// <param name="message">message (required).</param>
-        public HelloWorldResponse(string message = default(string))
+        /// <param name="message1">message1 (required).</param>
+        /// <param name="message2">message2.</param>
+        /// <param name="message3">message3 (required).</param>
+        /// <param name="message4">message4.</param>
+        public HelloWorldResponse(string message1 = default(string), string message2 = default(string), string message3 = default(string), string message4 = default(string))
         {
-            // to ensure "message" is required (not null)
-            if (message == null)
+            // to ensure "message1" is required (not null)
+            if (message1 == null)
             {
-                throw new ArgumentNullException("message is a required property for HelloWorldResponse and cannot be null");
+                throw new ArgumentNullException("message1 is a required property for HelloWorldResponse and cannot be null");
             }
-            this.Message = message;
+            this.Message1 = message1;
+            // to ensure "message3" is required (not null)
+            if (message3 == null)
+            {
+                throw new ArgumentNullException("message3 is a required property for HelloWorldResponse and cannot be null");
+            }
+            this.Message3 = message3;
+            this.Message2 = message2;
+            this.Message4 = message4;
         }
 
         /// <summary>
-        /// Gets or Sets Message
+        /// Gets or Sets Message1
         /// </summary>
-        [DataMember(Name = "message", IsRequired = true, EmitDefaultValue = true)]
-        public string Message { get; set; }
+        [DataMember(Name = "message1", IsRequired = true, EmitDefaultValue = true)]
+        public string Message1 { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Message2
+        /// </summary>
+        [DataMember(Name = "message2", EmitDefaultValue = true)]
+        public string Message2 { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Message3
+        /// </summary>
+        [DataMember(Name = "message3", IsRequired = true, EmitDefaultValue = true)]
+        public string Message3 { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Message4
+        /// </summary>
+        [DataMember(Name = "message4", EmitDefaultValue = true)]
+        public string Message4 { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -64,7 +93,10 @@ namespace Org.OpenAPITools.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class HelloWorldResponse {\n");
-            sb.Append("  Message: ").Append(Message).Append("\n");
+            sb.Append("  Message1: ").Append(Message1).Append("\n");
+            sb.Append("  Message2: ").Append(Message2).Append("\n");
+            sb.Append("  Message3: ").Append(Message3).Append("\n");
+            sb.Append("  Message4: ").Append(Message4).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
