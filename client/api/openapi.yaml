@@ -27,22 +27,19 @@ components:
       properties:
         message1:
           format: date-time
-          nullable: true
+          title: Message1
           type: string
         message2:
           format: date-time
-          nullable: true
+          title: Message2
           type: string
         message3:
           format: date-time
-          nullable: true
+          title: Message3
           type: string
         message4:
           format: date-time
-          nullable: true
+          title: Message4
           type: string
-      required:
-      - message1
-      - message3
       title: HelloWorldResponse
 

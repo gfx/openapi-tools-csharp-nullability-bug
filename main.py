@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, __version__ as fastapi_version
 from pydantic import BaseModel
 from typing import Optional
 from datetime import datetime, timezone
@@ -23,5 +23,5 @@ def get_root() -> HelloWorldResponse:
 
 if __name__ == "__main__":
     import uvicorn
-
+    print(f"FastAPI version: {fastapi_version}")
     uvicorn.run(app, host="127.0.0.1", port=8001)

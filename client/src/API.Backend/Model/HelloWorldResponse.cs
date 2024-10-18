@@ -33,56 +33,41 @@ namespace API.Backend.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="HelloWorldResponse" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected HelloWorldResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="HelloWorldResponse" /> class.
-        /// </summary>
-        /// <param name="message1">message1 (required).</param>
+        /// <param name="message1">message1.</param>
         /// <param name="message2">message2.</param>
-        /// <param name="message3">message3 (required).</param>
+        /// <param name="message3">message3.</param>
         /// <param name="message4">message4.</param>
-        public HelloWorldResponse(DateTime? message1 = default(DateTime?), DateTime? message2 = default(DateTime?), DateTime? message3 = default(DateTime?), DateTime? message4 = default(DateTime?))
+        public HelloWorldResponse(DateTime message1 = default(DateTime), DateTime message2 = default(DateTime), DateTime message3 = default(DateTime), DateTime message4 = default(DateTime))
         {
-            // to ensure "message1" is required (not null)
-            if (message1 == null)
-            {
-                throw new ArgumentNullException("message1 is a required property for HelloWorldResponse and cannot be null");
-            }
             this.Message1 = message1;
-            // to ensure "message3" is required (not null)
-            if (message3 == null)
-            {
-                throw new ArgumentNullException("message3 is a required property for HelloWorldResponse and cannot be null");
-            }
-            this.Message3 = message3;
             this.Message2 = message2;
+            this.Message3 = message3;
             this.Message4 = message4;
         }
 
         /// <summary>
         /// Gets or Sets Message1
         /// </summary>
-        [DataMember(Name = "message1", IsRequired = true, EmitDefaultValue = true)]
-        public DateTime? Message1 { get; set; }
+        [DataMember(Name = "message1", EmitDefaultValue = false)]
+        public DateTime Message1 { get; set; }
 
         /// <summary>
         /// Gets or Sets Message2
         /// </summary>
-        [DataMember(Name = "message2", EmitDefaultValue = true)]
-        public DateTime? Message2 { get; set; }
+        [DataMember(Name = "message2", EmitDefaultValue = false)]
+        public DateTime Message2 { get; set; }
 
         /// <summary>
         /// Gets or Sets Message3
         /// </summary>
-        [DataMember(Name = "message3", IsRequired = true, EmitDefaultValue = true)]
-        public DateTime? Message3 { get; set; }
+        [DataMember(Name = "message3", EmitDefaultValue = false)]
+        public DateTime Message3 { get; set; }
 
         /// <summary>
         /// Gets or Sets Message4
         /// </summary>
-        [DataMember(Name = "message4", EmitDefaultValue = true)]
-        public DateTime? Message4 { get; set; }
+        [DataMember(Name = "message4", EmitDefaultValue = false)]
+        public DateTime Message4 { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

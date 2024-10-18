@@ -29,55 +29,27 @@
       "HelloWorldResponse": {
         "properties": {
           "message1": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
+            "type": "string",
+            "format": "date-time",
             "title": "Message1"
           },
           "message2": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
+            "type": "string",
+            "format": "date-time",
             "title": "Message2"
           },
           "message3": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
+            "type": "string",
+            "format": "date-time",
             "title": "Message3"
           },
           "message4": {
-            "anyOf": [
-              {
-                "type": "string"
-              },
-              {
-                "type": "null"
-              }
-            ],
+            "type": "string",
+            "format": "date-time",
             "title": "Message4"
           }
         },
         "type": "object",
-        "required": [
-          "message1",
-          "message3"
-        ],
         "title": "HelloWorldResponse"
       }
     }

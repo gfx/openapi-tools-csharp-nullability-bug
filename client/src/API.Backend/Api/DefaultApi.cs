@@ -60,7 +60,7 @@ namespace API.Backend.Api
         /// <exception cref="API.Backend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of HelloWorldResponse</returns>
-        System.Threading.Tasks.Task<HelloWorldResponse> GetRootGetAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<HelloWorldResponse> GetRootGetAsync(System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// Get Root
@@ -71,7 +71,7 @@ namespace API.Backend.Api
         /// <exception cref="API.Backend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (HelloWorldResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<HelloWorldResponse>> GetRootGetWithHttpInfoAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<HelloWorldResponse>> GetRootGetWithHttpInfoAsync(System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -270,7 +270,7 @@ namespace API.Backend.Api
         /// <exception cref="API.Backend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of HelloWorldResponse</returns>
-        public async System.Threading.Tasks.Task<HelloWorldResponse> GetRootGetAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<HelloWorldResponse> GetRootGetAsync(System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             var task = GetRootGetWithHttpInfoAsync(cancellationToken);
 #if UNITY_EDITOR || !UNITY_WEBGL
@@ -287,7 +287,7 @@ namespace API.Backend.Api
         /// <exception cref="API.Backend.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (HelloWorldResponse)</returns>
-        public async System.Threading.Tasks.Task<API.Backend.Client.ApiResponse<HelloWorldResponse>> GetRootGetWithHttpInfoAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<API.Backend.Client.ApiResponse<HelloWorldResponse>> GetRootGetWithHttpInfoAsync(System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             API.Backend.Client.RequestOptions localVarRequestOptions = new API.Backend.Client.RequestOptions();
